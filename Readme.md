@@ -1,4 +1,4 @@
-Dev de la mécanique de movement2D (run, jump, crouch, climb)
+Dev de la mécanique de Weapon (cac & distance)
 
 Equipe : 
 - Clea
