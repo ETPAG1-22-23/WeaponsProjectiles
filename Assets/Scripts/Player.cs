@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static UnityEditor.FilePathAttribute;
 
 public class Player : MonoBehaviour
 {
@@ -16,6 +17,8 @@ public class Player : MonoBehaviour
     [SerializeField] bool is_jumping = false;
     [SerializeField] bool can_jump = false;
     [Range(0, 1)][SerializeField] float smooth_time = 0.5f;
+    [SerializeField] private Transform shootingPoint;
+    [SerializeField] private Transform gun;
 
 
     // Start is called before the first frame update
@@ -32,9 +35,21 @@ public class Player : MonoBehaviour
     {
         horizontal_value = Input.GetAxis("Horizontal");
 
-        if(horizontal_value > 0) sr.flipX = false;
-        else if (horizontal_value < 0) sr.flipX = true;
-        
+        if (horizontal_value > 0)
+        {
+            sr.flipX = false; 
+            shootingPoint.localPosition = new Vector2(0.93f, -0.61f); // Comme le gun.localPosition mais avec des coord. differentes
+            gun.localPosition = new Vector2(0.5f, -0.61f); // change sa position par rapport a ses parents en un nouveau vecteur qui as des coord. opposes a l'autre
+        }
+        else if (horizontal_value < 0)
+        {
+            sr.flipX = true;
+
+            
+            shootingPoint.localPosition = new Vector2(-0.93f, -0.61f); // Comme le gun.localPosition mais avec des coord. differentes
+
+            gun.localPosition = new Vector2(-0.5f, -0.61f); // Change sa position par rapport a ses parents en un nouveau vecteur qui as des coord. opposes a l'autre
+        }        
         animController.SetFloat("Speed", Mathf.Abs(horizontal_value));
    
         if (Input.GetButtonDown("Jump") && can_jump)
