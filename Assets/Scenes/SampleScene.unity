@@ -300,7 +300,7 @@ MonoBehaviour:
   bullet: {fileID: 1159527452641719572, guid: 8e942ae0e79b6284795eaf33e20a7b4f, type: 3}
   bulletTransform: {fileID: 183016990}
   canFire: 0
-  timeBetweenFiring: 0.8
+  timeBetweenFiring: 0.3
 --- !u!1 &641578734
 GameObject:
   m_ObjectHideFlags: 0
@@ -518,9 +518,11 @@ MonoBehaviour:
   is_jumping: 0
   can_jump: 0
   smooth_time: 0.5
+  shootingPoint: {fileID: 1272938364}
+  gun: {fileID: 1974883829}
 --- !u!95 &694507428
 Animator:
-  serializedVersion: 4
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -537,7 +539,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!114 &694507429
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -552,6 +554,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shootingPoint: {fileID: 1272938364}
   bulletPrefab: {fileID: 6890417222689236918, guid: e431fc6553832a3489936444157e05b5, type: 3}
+  speed: 5
 --- !u!1 &1272938363
 GameObject:
   m_ObjectHideFlags: 0
@@ -577,7 +580,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1272938363}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.93, y: -0.61, z: 0}
+  m_LocalPosition: {x: 0.9299998, y: -0.61, z: 0}
   m_LocalScale: {x: 0.6791592, y: 0.68198895, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -660,9 +663,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1974883828}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.5, y: -0.61, z: 0}
-  m_LocalScale: {x: 1, y: 0.17989549, z: 1}
+  m_LocalScale: {x: 1, y: 0.1798955, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 694507422}
