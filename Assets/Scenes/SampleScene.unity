@@ -359,9 +359,10 @@ GameObject:
   - component: {fileID: 694507424}
   - component: {fileID: 694507425}
   - component: {fileID: 694507426}
+  - component: {fileID: 694507430}
   - component: {fileID: 694507427}
-  - component: {fileID: 694507428}
   - component: {fileID: 694507429}
+  - component: {fileID: 694507428}
   m_Layer: 3
   m_Name: Player
   m_TagString: Untagged
@@ -437,7 +438,7 @@ Transform:
   - {fileID: 1272938364}
   - {fileID: 604391672}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &694507424
 Rigidbody2D:
@@ -554,7 +555,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shootingPoint: {fileID: 1272938364}
   bulletPrefab: {fileID: 6890417222689236918, guid: e431fc6553832a3489936444157e05b5, type: 3}
-  speed: 5
+  speed: 8
+--- !u!114 &694507430
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 694507420}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e32c958fe25583479c3e9d6c68e5707, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1272938363
 GameObject:
   m_ObjectHideFlags: 0
@@ -805,7 +818,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2064655708
 GameObject:
