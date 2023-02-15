@@ -10,8 +10,8 @@ public class PlayerCombat : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
 
-            Attack();
-
+            //Attack();
+            
         }
     }
 
